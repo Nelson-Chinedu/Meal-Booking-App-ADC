@@ -1,0 +1,22 @@
+{
+  "name": "andela_developer_challenge",
+  "version": "1.0.0",
+  "description": "A developer challenge to build a meal booking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "meal",
+    "booking",
+    "app",
+    "booking",
+    "meal",
+    "booking",
+    "app",
+    "meal",
+    "booking"
+  ],
+  "author": "Chinedu Nelson",
+  "license": "MIT"
+}
