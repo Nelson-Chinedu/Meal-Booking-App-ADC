@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <title>Welcome to Mealitious foodie</title>
 </head>
 <body>
@@ -29,47 +29,41 @@
       </span>
       <a href="index.html" class="logo">Mealitious foodie</a>
       <ul class="main-nav" id="menuBar">
-        <li><a href="index.html" class="nav-links">Home</a></li>
-        <li><a href="about.html#abt-main-section" class="nav-links">About Us</a></li>
-        <li><a href="services.html#ser-main-section" class="nav-links">Services</a></li>
-        <li><a href="contact.html#con-main-section" class="nav-links">Contact</a></li>
-        <li><a href="signin.html#main-section" class="nav-links">Log In</a></li>
-        <li><a href="signup.html#main-section" class="nav-links link">Sign Up</a></li>
+        <li><a href="index.html" id="myBtn" class="nav-links">Home</a></li>
+        <li><a href="add.html" id="myBtn" class="nav-links">Add</a></li>
+        <li><a href="modify.html" class="nav-links">Modify/Delete</a></li>
+        <li><a href="order.html" class="nav-links">View</a></li>
+        <li><a href="sales.html" class="nav-links">Sales</a></li>
+        <li><a href="../index.html" class="nav-links">Log Out</a></li>
       </ul>
     </nav>
-    <div class="banner-container">
-      <div class="banner-wrapper">
-        <div class="bannerbg">
-          <img src="assets/image/bg.jpeg" alt="an image displaying a food">
-        </div>
-      </div>
-      <div class="banner-text">
-        <h2>Your Day is well enjoyed when you book a meal with us</h2>
-        <a href="login.html" id="bookMeal"> Book a meal</a>
-      </div>
-    </div>
   </header>
-  <section id="con-main-section">
-    <article class="con-article-a">
-      <h2>contact</h2>
-      <div class="form-container">
-        <form action="#">
-          <div class="form-group">
-            <label for="firstname">Firstname</label>
-            <input type="text" placeholder="enter firstname" required="required" autocomplete="off">
-          </div>
-          <div class="form-group">
-            <label for="lastname">Lastname</label>
-            <input type="text" placeholder="enter lastname" required="required" autocomplete="off">
-          </div>
-          <div class="form-group">
-            <label for="password">Subject</label>
-            <textarea  id="desc" cols="30" rows="10" placeholder="Description"></textarea>
-          </div>
-            <button type="submit" id="btn">Submit</button>
-        </form>
-      </div>
-    </article>
+  <section id="mod-main-section">
+    <h2>Sales</h2>
+    <div class="form-container">
+      <form action="#">
+        <div class="form-group-date">
+          <input type="date">
+          <button>view</button>
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <tr>
+              <td>Date</td>
+              <td>Record</td>
+            </tr>
+            <tr>
+              <td>20/05/2019</td>
+              <td>45000</td>
+            </tr>
+            <tr>
+              <td>21/05/2019</td>
+              <td>23000</td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
   </section>
   <footer class="main-footer">
     <div class="get-in-touch">
@@ -100,6 +94,6 @@
       <p>copyright &copy; 2019 - All rights reserved</p>
     </div>
   </footer>
-<script src="./assets/js/script.js"></script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
