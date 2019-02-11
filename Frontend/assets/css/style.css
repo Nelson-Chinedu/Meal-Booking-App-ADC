@@ -225,7 +225,7 @@ textarea{
     -o-border-radius: 4px;
     border-radius: 4px;
 }
-#btn{
+.btn{
     font-size: 18px;
     background-color: tomato;
     color: #fff;
@@ -279,7 +279,7 @@ textarea{
     -o-border-radius: 4px;
     border-radius: 4px;
 }
-.btn-order:hover, #btn:hover, 
+.btn-order:hover, .btn:hover, 
 .order-group-action button:hover{
     background-color: rgb(253, 88, 59);
 }
@@ -614,7 +614,7 @@ table tr:first-child{
     .form-container{
         width: 90%;
     }
-    #btn{
+    .btn{
         width: 100%;
         padding: 10px 14px;
     }

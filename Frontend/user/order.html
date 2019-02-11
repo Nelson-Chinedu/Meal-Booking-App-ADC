@@ -56,21 +56,21 @@
       <form action="#">
         <div class="form-group">
           <label for="firstname">Firstname</label>
-          <input type="text" placeholder="Enter firstname" required>
+          <input type="text" id="ord-fname" placeholder="Enter firstname" required>
         </div>
         <div class="form-group">
           <label for="lastname">Lastname</label>
-          <input type="text" placeholder="Enter lastname" required>
+          <input type="text" id="ord-lname" placeholder="Enter lastname" required>
         </div>
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" placeholder="Enter email address" required>
+          <input type="email" id="ord-email" placeholder="Enter email address" required>
         </div>
         <div class="form-group">
           <label for="price">Menu price</label>
           <input type="text" value="-N- 2000" readonly="readonly">
         </div>
-          <button type="submit" id="btn">Make order</button>
+          <button type="submit" class="btn" onclick="handleOrder();">Make order</button>
           <a href="index.html" class="btn-back">Go back</a>
       </form>
     </div>

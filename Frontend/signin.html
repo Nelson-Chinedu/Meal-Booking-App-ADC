@@ -56,13 +56,13 @@
       <form action="#">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" placeholder="enter username" required="required">
+          <input type="text" id="lg-uname" placeholder="enter username" required>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" placeholder="enter password" required="required">
+          <input type="password" id="lg-pwd" placeholder="enter password" required >
         </div>
-          <button type="submit" id="btn">Login</button>
+          <button type="button" class="btn" onclick="handleLogin();">Login</button>
       </form>
     </div>
   </section>
