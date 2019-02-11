@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A meal booking app built with HTML, CSS and JavaScript">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Chinedu Nelson">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="../assets/css/style.css">  
@@ -24,7 +27,6 @@
     </nav>
     <nav class="navbar">
       <span class="navbar-toggle" id="navToggle" >
-        <!-- <i class="fas fa-bars"></i> -->
         <button>Menu</button>
       </span>
       <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Mealitious foodie</a>
@@ -54,21 +56,21 @@
       <form action="#">
         <div class="form-group">
           <label for="firstname">Firstname</label>
-          <input type="text" placeholder="Enter firstname" required>
+          <input type="text" id="ord-fname" placeholder="Enter firstname" required>
         </div>
         <div class="form-group">
           <label for="lastname">Lastname</label>
-          <input type="text" placeholder="Enter lastname" required>
+          <input type="text" id="ord-lname" placeholder="Enter lastname" required>
         </div>
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" placeholder="Enter email address" required>
+          <input type="email" id="ord-email" placeholder="Enter email address" required>
         </div>
         <div class="form-group">
           <label for="price">Menu price</label>
           <input type="text" value="-N- 2000" readonly="readonly">
         </div>
-          <button type="submit" id="btn">Make order</button>
+          <button type="submit" class="btn" onclick="handleOrder();">Make order</button>
           <a href="index.html" class="btn-back">Go back</a>
       </form>
     </div>

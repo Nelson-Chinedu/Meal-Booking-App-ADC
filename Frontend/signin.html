@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A meal booking app built with HTML, CSS and JavaScript">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Chinedu Nelson">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -24,7 +27,6 @@
     </nav>
     <nav class="navbar">
       <span class="navbar-toggle" id="navToggle" >
-        <!-- <i class="fas fa-bars"></i> -->
         <button>Menu</button>
       </span>
       <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Mealitious foodie</a>
@@ -54,13 +56,13 @@
       <form action="#">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" placeholder="enter username" required="required">
+          <input type="text" id="lg-uname" placeholder="enter username" required>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" placeholder="enter password" required="required">
+          <input type="password" id="lg-pwd" placeholder="enter password" required >
         </div>
-          <button type="submit" id="btn">Login</button>
+          <button type="button" class="btn" onclick="handleLogin();">Login</button>
       </form>
     </div>
   </section>
