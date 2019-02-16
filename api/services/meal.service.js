@@ -22,48 +22,18 @@ const MealService = {
   },
   getSingleMeal(id) {
     const mealId = dummyData.meals.find(meal => meal.id === Number(id));
-    if (!mealId) {
-      return {
-        message: 'The meal with the id is not found',
-        error: true,
-      };
-    }
-    return {
-      mealId,
-      message: 'Succes',
-      error: true,
-    };
+    return mealId || {};
   },
   updateMeal(id, updateMeal) {
     const mealId = dummyData.meals.find(meal => meal.id === Number(id));
-    if (!mealId) {
-      return {
-        message: 'The meal with the id is not found',
-        error: true,
-      };
-    }
     updateMeal.id = mealId.id;
     dummyData.meals.splice(mealId.id - 1, 1, updateMeal);
-    return {
-      updateMeal,
-      message: 'Meal updated successfully',
-      error: false,
-    };
+    return updateMeal;
   },
   deleteMeal(id) {
     const mealId = dummyData.meals.find(meal => meal.id === Number(id));
-    if (!mealId) {
-      return {
-        message: 'The meal with the id is not found',
-        error: true,
-      };
-    }
     dummyData.meals.splice(mealId.id - 1, 1);
-    return {
-      mealId,
-      message: 'Meal deleted successfully',
-      error: false,
-    };
+    return {};
   },
 };
 
