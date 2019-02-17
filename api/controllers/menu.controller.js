@@ -29,6 +29,23 @@ const menuController = {
       error: false,
     });
   },
+  getSingleMenu(req, res) {
+    const { id } = req.params;
+    const menu = menuService.getSingleMenu(id);
+    // return status of 400 and message if menu is false
+    if (!menu) {
+      return res.status(400).json({
+        message: 'The menu with the ID is not found',
+        error: true,
+      });
+    }
+    // return status of 200 and data if meal is true
+    return res.status(200).json({
+      data: menu,
+      message: 'success',
+      error: false,
+    });
+  },
 };
 
 export default menuController;

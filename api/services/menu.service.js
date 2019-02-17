@@ -19,10 +19,14 @@ const menuService = {
       newMenu.name = menu.name;
       newMenu.size = menu.size;
       newMenu.price = menu.price;
-      newMenu.createdAt = menu.createdAt;
-      newMenu.updatedAt = menu.updatedAt;
+      newMenu.createdAt = new Date().toLocaleString();
+      newMenu.updatedAt = new Date().toLocaleString();
       return newMenu;
     });
+  },
+  getSingleMenu(id) {
+    const menuId = menuDummyData.menu.find(menu => menu.id === Number(id));
+    return menuId;
   },
 };
 
