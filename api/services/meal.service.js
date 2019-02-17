@@ -7,8 +7,6 @@ const MealService = {
       const newMeal = new Meal();
       newMeal.id = meal.id;
       newMeal.name = meal.name;
-      newMeal.size = meal.size;
-      newMeal.price = meal.price;
       return newMeal;
     });
   },
@@ -22,7 +20,7 @@ const MealService = {
   },
   getSingleMeal(id) {
     const mealId = dummyData.meals.find(meal => meal.id === Number(id));
-    return mealId || {};
+    return mealId;
   },
   updateMeal(id, updateMeal) {
     const mealId = dummyData.meals.find(meal => meal.id === Number(id));
@@ -33,7 +31,7 @@ const MealService = {
   deleteMeal(id) {
     const mealId = dummyData.meals.find(meal => meal.id === Number(id));
     dummyData.meals.splice(mealId.id - 1, 1);
-    return {};
+    return mealId;
   },
 };
 
