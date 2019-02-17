@@ -1,5 +1,5 @@
 import MealService from '../services/meal.service';
-import dummyData from '../utils/dummyData';
+import dummyData from '../utils/mealDummyData';
 
 const mealController = {
   // fetch all meals
