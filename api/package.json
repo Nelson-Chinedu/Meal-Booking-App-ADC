@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -d dist",
     "start": "nodemon --exec babel-node index.js"
   },
   "keywords": [
-    "meal",
-    "booking",
-    "app",
-    "meal",
-    "food"
+    "meal app",
+    "food app",
+    "meal app",
+    "meal booking app",
+    "food booking app"
   ],
   "author": "Nelson Chinedu",
   "license": "MIT",
