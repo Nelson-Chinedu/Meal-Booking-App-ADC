@@ -34,7 +34,7 @@
 4. Api endpoint to ``` Get all meals ``` enter ``` localhost:3000/api/v1/meals/ ``` 
    in the Enter request url and click on send or press Enter key
 
-   ![Get all meals](/image/img1.PNG)
+   ![Get all meals](./image/img1.PNG)
 
 5. Api endpoint to ``` Post a meal ``` change the ``` GET ``` to ``` POST ``` enter 
    ``` localhost:3000/api/v1/meals/ ``` in the Enter request url click on ``` Body ```
