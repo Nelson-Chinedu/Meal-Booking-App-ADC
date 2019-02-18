@@ -20,8 +20,6 @@
 
 3. cd into api folder
 
-4. run ``` npm install ``` to install all the dependencies needed
-
 
 ### HOW IT WORKS
 1. Open up Git bash terminal and CD (change directory) into the directory or
