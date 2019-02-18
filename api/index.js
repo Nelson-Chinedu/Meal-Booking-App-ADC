@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json({ extended: false }));
 
 app.use('/api/v1/meals', mealsRoute);
-app.use('/api/v1/menus', menuRoute);
+app.use('/api/v1/menu', menuRoute);
 app.use('/api/v1/orders', orderRoute);
 
 app.get('/', (req, res) => {
