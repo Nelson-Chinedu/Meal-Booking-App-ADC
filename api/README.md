@@ -42,7 +42,7 @@
    ``` jSON(application/json) ``` enter this format as shown to add a meal click ``` SEND ```
    and see it below been added
 
-   ![Post a meal](/image/img2.PNG)
+   ![Post a meal](./image/img2.PNG)
 
 6. Api endpoint to ``` Update a meal ``` change the ``` GET ``` to ``` PUT ``` enter 
    ``` localhost:3000/api/v1/meals/5 ``` in the Enter request url click on ``` Body ```
@@ -50,13 +50,13 @@
    ``` jSON(application/json) ``` enter this format as shown to update a meal click ``` SEND ```
    and see it below been updated
 
-   ![Update a meal](/image/img3.PNG)
+   ![Update a meal](./image/img3.PNG)
 
 7. Api endpoint to ``` Delete a meal ``` change the ``` GET ``` to ``` DELETE ``` enter 
    ``` localhost:3000/api/v1/meals/5 ``` in the Enter request url click on ``` SEND ```
    and see the success message below
 
-   ![Delete a meal](/image/img4.PNG)
+   ![Delete a meal](./image/img4.PNG)
 
 8. Api endpoint to ``` Post a menu ``` change the ``` GET ``` to ``` POST ``` enter 
    ``` localhost:3000/api/v1/menu/ ``` in the Enter request url click on ``` Body ```
@@ -64,12 +64,12 @@
    ``` jSON(application/json) ``` enter this format as shown to add a meal click ``` SEND ```
    and see it below been added
 
-   ![Post a menu](/image/img5.PNG)
+   ![Post a menu](./image/img5.PNG)
 
 9. Api endpoint to ``` Get menu ``` enter ``` localhost:3000/api/v1/menu/ ``` 
    in the Enter request url and click on send or press Enter key
 
-   ![Post a menu](/image/img6.PNG)
+   ![Post a menu](./image/img6.PNG)
 
 10. Api endpoint to ``` Post orders ``` change the ``` GET ``` to ``` POST ``` enter 
     ``` localhost:3000/api/v1/orders/ ``` in the Enter request url click on ``` Body ```
@@ -77,7 +77,7 @@
     ``` jSON(application/json) ``` enter this format as shown to post an order click ``` SEND ```
     and see it below been added
 
-    ![Post order](/image/img7.PNG)
+    ![Post order](./image/img7.PNG)
 
 11. Api endpoint to ``` Update an order ``` change the ``` GET ``` to ``` PUT ``` enter 
     ``` localhost:3000/api/v1/orders/5 ``` in the Enter request url click on ``` Body ```
@@ -85,10 +85,10 @@
     ``` jSON(application/json) ``` enter this format as shown to update an order click ``` SEND ```
     and see it below been updated
 
-    ![Update an order](/image/img8.PNG)
+    ![Update an order](./image/img8.PNG)
 
 12. Api endpoint to ``` Get orders ``` enter ``` localhost:3000/api/v1/orders/ ``` 
     in the Enter request url and click on send or press Enter key
 
-    ![Get orders](/image/img9.PNG)
+    ![Get orders](./image/img9.PNG)
 
