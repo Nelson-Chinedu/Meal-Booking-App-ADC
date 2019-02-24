@@ -18,5 +18,6 @@
     "booking"
   ],
   "author": "Chinedu Nelson",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {}
 }
