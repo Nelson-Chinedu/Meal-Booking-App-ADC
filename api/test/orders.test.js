@@ -52,9 +52,9 @@ describe('Orders Route Test', () => {
   describe('/PUT/:id order', () => {
     it('update order by id', (done) => {
       const order = {
-        name: 'egg',
+        name: 'eba and egusi soup',
         size: 'small',
-        price: 50,
+        price: 1500,
       };
       chai.request(app)
         .put(`/api/v1/orders/ ${1}`)
