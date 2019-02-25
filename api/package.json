@@ -4,7 +4,7 @@
   "description": "A meal booking app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require @babel/register || true",
+    "test": "mocha --require @babel/register --exit || true",
     "build": "babel index.js -d dist",
     "cover": "istanbul cover _mocha",
     "start": "nodemon --exec babel-node index.js"
