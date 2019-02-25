@@ -4,5 +4,8 @@ node_js:
 cache:
   directories:
     - "node_modules"
-after_success:
-  - npm run coveralls
+before_install: cd ./test
+install:
+  - npm install
+script:
+- npm run test
