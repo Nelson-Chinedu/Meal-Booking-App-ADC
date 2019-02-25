@@ -7,7 +7,6 @@
     "test": "mocha --require @babel/register || true",
     "build": "babel index.js -d dist",
     "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "start": "nodemon --exec babel-node index.js"
   },
   "keywords": [
