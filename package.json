@@ -1,23 +1,42 @@
 {
-  "name": "andela_developer_challenge",
+  "name": "meal-booking-app",
   "version": "1.0.0",
-  "description": "A developer challenge to build a meal booking app",
+  "description": "A meal booking app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require @babel/register --exit || true",
+    "build": "babel index.js -d dist",
+    "cover": "istanbul cover _mocha",
+    "dev": "nodemon --exec babel-node index.js",
+    "start": "node ./dist.index.js"
   },
   "keywords": [
-    "meal",
-    "booking",
-    "app",
-    "booking",
-    "meal",
-    "booking",
-    "app",
-    "meal",
-    "booking"
+    "meal app",
+    "food app",
+    "meal app",
+    "meal booking app",
+    "food booking app"
   ],
-  "author": "Chinedu Nelson",
+  "author": "Nelson Chinedu",
   "license": "MIT",
-  "devDependencies": {}
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "coveralls": "^3.0.3",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodemon": "^1.18.10"
+  }
 }
