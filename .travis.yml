@@ -9,3 +9,8 @@ install:
   - npm install
 script:
   - npm run test
+after_success:
+  - npm run coverage
+env:
+  global:
+    - CODECLIMATE_REPO_TOKEN=0eeaaea8fe41063c5661a305fb028c6edaf85f8e5f486b16248a318337f3f42f
