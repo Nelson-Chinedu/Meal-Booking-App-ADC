@@ -1,18 +1,16 @@
 import MealService from '../services/meal.service';
-// import models from '../models';
 
 const mealController = {
   // fetch all meals
   async fetchAllMeal(req, res) {
     const meal = await MealService.fetchAllMeals();
-    
     // return status of 400 and message if meal are empty
-    // if (meal === undefined) {
-    //   return res.status(400).json({
-    //     message: 'Meal not found',
-    //     error: true,
-    //   });
-    // }
+    if (meal.length === 0) {
+      return res.status(400).json({
+        message: 'No meals found',
+        error: true,
+      });
+    }
     // return status of 200 and message if meal is true
     return res.status(200).json({
       data: meal,
@@ -39,21 +37,21 @@ const mealController = {
       error: false,
     });
   },
-  // Get a meal by ID
-  async getMeal(req, res) {
+  // Delete a meal
+  async deleteMeal(req, res) {
     const { id } = req.params;
-    const meal = await MealService.getSingleMeal(id);
-    // return status of 400 and message if meal is false
-    if (!meal) {
+    const meal = await MealService.deleteMeal(id);
+    // return status of 400 and message if meal
+    // equal zero
+    if (meal === 0) {
       return res.status(400).json({
-        message: 'The meal with the ID is not found',
+        message: 'the meal with the id is not found',
         error: true,
       });
     }
-    // return status of 200 and data if meal is true
     return res.status(200).json({
       data: meal,
-      message: 'success',
+      message: 'successfully deleted',
       error: false,
     });
   },
