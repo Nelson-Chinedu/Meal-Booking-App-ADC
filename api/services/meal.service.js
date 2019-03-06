@@ -3,23 +3,22 @@ import models from '../models';
 const MealService = {
   // Get all meals
   fetchAllMeals() {
-    return models.Meal.findAll()
+    return models.Meals.findAll()
       .then(meal => meal);
   },
   // Post a meal
   addMeal(meal) {
-    return models.Meal.create(meal).then(newMeal => newMeal);
+    return models.Meals.create(meal).then(newMeal => newMeal);
   },
-  // Get meal by ID
-  getSingleMeal(id) {
-    return models.Meal.findOne({
+  //  Delete a meal
+  deleteMeal(id) {
+    return models.Meals.destroy({
       where: {
         id,
       },
     })
-      .then(meal => meal);
+      .then(rowDeleted => rowDeleted);
   },
-
 };
 
 export default MealService;
