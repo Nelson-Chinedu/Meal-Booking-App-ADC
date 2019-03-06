@@ -11,6 +11,8 @@
 
 4. Download and install Postman
 
+5. Download and install postgres pgAdmin4 (for database)
+
 
 ### INSTALLATION INSTRUCTION
 1. clone or download this repository to any directory on local machine
@@ -20,6 +22,14 @@
 
 3. cd into api folder
 
+4. Enter ``` node_modules/.bin/sequelize db:migrate ``` on Git bash (terminal) and return ``` Enter ```
+
+
+### DATABASE 
+1. Run pgAdmin as ``` Administrator ``` to open the Graphical User Interface on browser
+
+2. Create a database with name ``` mealApp ```
+
 
 ### HOW IT WORKS
 1. Open up Git bash terminal and CD (change directory) into the directory or
@@ -27,66 +37,74 @@
 
 2. Run ``` npm start ``` to start the application server
 
-3. Open up Postman to test api endpoints
 
-4. Api endpoint to ``` Get all meals ``` enter ``` localhost:3000/api/v1/meals/ ``` 
-   in the Enter request url and click on send or press Enter key
+### ENDPOINTS
+- Open up Postman to test api endpoints
+  -  Server runs on ``` localhost:3000 ```
 
-   ![Get all meals](./image/img1.PNG)
+<table>
+<tr>
+    <th>HTTP VERB</th>
+	<th>ENDPOINT</th>
+	<th>FUNCTIONALITY</th>
+</tr>
+<tr>
+	<td>POST</td>
+	<td>/auth/signup</td>
+	<td>Register a user</td>
+</tr>
+<tr>
+	<td>POST</td>
+	<td>/auth/login</td>
+	<td>Login a user</td>
+</tr>
+<tr>
+	<td>GET</td>
+	<td>/api/v1/meals</td>
+	<td>Get all the meal options</td>
+</tr>
+<tr>
+	<td>POST</td>
+	<td>/api/v1/meals</td>
+	<td>Add a meal option</td>
+</tr>
+<tr>
+	<td>PUT</td>
+	<td>/api/v1/meals/<mealId></td>
+	<td>Update the information of a meal option</td>
+</tr>
+<tr>
+	<td>DELETE</td>
+	<td>/api/v1/meals/<mealId></td>
+	<td>Remove a meal option</td>
+</tr>
+<tr>
+	<td>POST</td>
+	<td>/api/v1/menu</td>
+	<td>Setup the menu for the day</td>
+</tr>
+<tr>
+	<td>GET</td>
+	<td>/api/v1/menu</td>
+	<td>Get the menu for the day</td>
+</tr>
+<tr>
+	<td>POST</td>
+	<td>api/v1/orders</td>
+	<td>Select the meal option from the menu</td>
+</tr>
+<tr>
+<tr>
+	<td>PUT</td>
+	<td>/api/v1/orders/<orderId></td>
+	<td>Modify an order</td>
+</tr>
+<tr>
+	<td>GET</td>
+	<td>/api/v1/orders</td>
+	<td>Get all the orders</td>
+</tr>
+</table>
 
-5. Api endpoint to ``` Post a meal ``` change the ``` GET ``` to ``` POST ``` enter 
-   ``` localhost:3000/api/v1/meals/ ``` in the Enter request url click on ``` Body ```
-   select the ``` raw ``` option navigate to the ``` Text ``` with dropdown and choose 
-   ``` jSON(application/json) ``` enter this format as shown to add a meal click ``` SEND ```
-   and see it below been added
 
-   ![Post a meal](./image/img2.PNG)
-
-6. Api endpoint to ``` Update a meal ``` change the ``` GET ``` to ``` PUT ``` enter 
-   ``` localhost:3000/api/v1/meals/5 ``` in the Enter request url click on ``` Body ```
-   select the ``` raw ``` option navigate to the ``` Text ``` with dropdown and choose 
-   ``` jSON(application/json) ``` enter this format as shown to update a meal click ``` SEND ```
-   and see it below been updated
-
-   ![Update a meal](./image/img3.PNG)
-
-7. Api endpoint to ``` Delete a meal ``` change the ``` GET ``` to ``` DELETE ``` enter 
-   ``` localhost:3000/api/v1/meals/5 ``` in the Enter request url click on ``` SEND ```
-   and see the success message below
-
-   ![Delete a meal](./image/img4.PNG)
-
-8. Api endpoint to ``` Post a menu ``` change the ``` GET ``` to ``` POST ``` enter 
-   ``` localhost:3000/api/v1/menu/ ``` in the Enter request url click on ``` Body ```
-   select the ``` raw ``` option navigate to the ``` Text ``` with dropdown and choose 
-   ``` jSON(application/json) ``` enter this format as shown to add a meal click ``` SEND ```
-   and see it below been added
-
-   ![Post a menu](./image/img5.PNG)
-
-9. Api endpoint to ``` Get menu ``` enter ``` localhost:3000/api/v1/menu/ ``` 
-   in the Enter request url and click on send or press Enter key
-
-   ![Post a menu](./image/img6.PNG)
-
-10. Api endpoint to ``` Post orders ``` change the ``` GET ``` to ``` POST ``` enter 
-    ``` localhost:3000/api/v1/orders/ ``` in the Enter request url click on ``` Body ```
-    select the ``` raw ``` option navigate to the ``` Text ``` with dropdown and choose 
-    ``` jSON(application/json) ``` enter this format as shown to post an order click ``` SEND ```
-    and see it below been added
-
-    ![Post order](./image/img7.PNG)
-
-11. Api endpoint to ``` Update an order ``` change the ``` GET ``` to ``` PUT ``` enter 
-    ``` localhost:3000/api/v1/orders/5 ``` in the Enter request url click on ``` Body ```
-    select the ``` raw ``` option navigate to the ``` Text ``` with dropdown and choose 
-    ``` jSON(application/json) ``` enter this format as shown to update an order click ``` SEND ```
-    and see it below been updated
-
-    ![Update an order](./image/img8.PNG)
-
-12. Api endpoint to ``` Get orders ``` enter ``` localhost:3000/api/v1/orders/ ``` 
-    in the Enter request url and click on send or press Enter key
-
-    ![Get orders](./image/img9.PNG)
 
