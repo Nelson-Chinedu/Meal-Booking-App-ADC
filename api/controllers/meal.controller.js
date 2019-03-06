@@ -1,5 +1,5 @@
 import MealService from '../services/meal.service';
-import models from '../models';
+// import models from '../models';
 
 const mealController = {
   // fetch all meals
@@ -7,12 +7,12 @@ const mealController = {
     const meal = await MealService.fetchAllMeals();
     
     // return status of 400 and message if meal are empty
-    if (!meal) {
-      return res.status(400).json({
-        message: 'Meal not found',
-        error: true,
-      });
-    }
+    // if (meal === undefined) {
+    //   return res.status(400).json({
+    //     message: 'Meal not found',
+    //     error: true,
+    //   });
+    // }
     // return status of 200 and message if meal is true
     return res.status(200).json({
       data: meal,
