@@ -7,4 +7,4 @@ router.get('/', menuController.getDayMenu);
 router.get('/:id', menuController.getSingleMenu);
 router.post('/', menuController.addDayMenu);
 
-export default router;
+// export default router;
