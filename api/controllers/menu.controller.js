@@ -2,7 +2,7 @@ import menuService from '../services/menu.service';
 
 const menuController = {
   // Add menu for the Day
-  addDayMenu(req, res) {
+  async addDayMenu(req, res) {
     const newMenu = req.body;
     // return status of 400 and message if one or more
     // of newMenu object is/are empty
@@ -13,7 +13,7 @@ const menuController = {
       });
     }
     // return status of 200 if menu is true
-    const menu = menuService.addMenu(newMenu);
+    const menu = await menuService.addMenu(newMenu);
     return res.status(200).json({
       data: menu,
       message: 'success',
@@ -21,25 +21,14 @@ const menuController = {
     });
   },
   // Get all Menu set for the Day
-  getDayMenu(req, res) {
-    const menu = menuService.getMenu();
-    return res.status(200).json({
-      data: menu,
-      message: 'success',
-      error: false,
-    });
-  },
-  getSingleMenu(req, res) {
-    const { id } = req.params;
-    const menu = menuService.getSingleMenu(id);
-    // return status of 400 and message if menu is false
-    if (!menu) {
+  async getDayMenu(req, res) {
+    const menu = await menuService.getMenu();
+    if (menu.length === 0) {
       return res.status(400).json({
-        message: 'The menu with the ID is not found',
+        message: 'No menu found',
         error: true,
       });
     }
-    // return status of 200 and data if meal is true
     return res.status(200).json({
       data: menu,
       message: 'success',

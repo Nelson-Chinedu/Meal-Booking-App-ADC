@@ -1,42 +1,23 @@
-import dummyData from '../utils/mealDummyData';
-import Meal from '../models/Meal.model';
+import models from '../models';
 
 const MealService = {
   // Get all meals
   fetchAllMeals() {
-    return dummyData.meals.map((meal) => {
-      const newMeal = new Meal();
-      newMeal.id = meal.id;
-      newMeal.name = meal.name;
-      return newMeal;
-    });
+    return models.Meals.findAll()
+      .then(meal => meal);
   },
   // Post a meal
   addMeal(meal) {
-    const getMealLength = dummyData.meals.length;
-    const lastId = dummyData.meals[getMealLength - 1].id;
-    const newId = lastId + 1;
-    meal.id = newId;
-    dummyData.meals.push(meal);
-    return meal;
+    return models.Meals.create(meal).then(newMeal => newMeal);
   },
-  // Get meal by ID
-  getSingleMeal(id) {
-    const mealId = dummyData.meals.find(meal => meal.id === Number(id));
-    return mealId;
-  },
-  // Update meal by ID
-  updateMeal(id, updateMeal) {
-    const mealId = dummyData.meals.find(meal => meal.id === Number(id));
-    updateMeal.id = mealId.id;
-    dummyData.meals.splice(mealId.id - 1, 1, updateMeal);
-    return updateMeal;
-  },
-  // Delete meal by ID
+  //  Delete a meal
   deleteMeal(id) {
-    const mealId = dummyData.meals.find(meal => meal.id === Number(id));
-    dummyData.meals.splice(mealId.id - 1, 1);
-    return mealId;
+    return models.Meals.destroy({
+      where: {
+        id,
+      },
+    })
+      .then(rowDeleted => rowDeleted);
   },
 };
 
