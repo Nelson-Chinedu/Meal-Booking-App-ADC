@@ -11,6 +11,8 @@
 
 4. Download and install Postman
 
+5. Download and install postgres pgAdmin4 (for database)
+
 
 ### INSTALLATION INSTRUCTION
 1. clone or download this repository to any directory on local machine
@@ -19,6 +21,14 @@
    right click on the repo folder and click on Git Bash here
 
 3. cd into api folder
+
+4. Enter ``` node_modules/.bin/sequelize db:migrate ``` on Git bash (terminal) and return ``` Enter ```
+
+
+### DATABASE 
+1. Run pgAdmin as ``` Administrator ``` to open the Graphical User Interface on browser
+
+2. Create a database with name ``` mealApp ```
 
 
 ### HOW IT WORKS
